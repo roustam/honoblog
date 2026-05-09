@@ -11,12 +11,10 @@ import type { CreatePostInput, UpdatePostInput } from "../types";
 
 const app = new Hono();
 
-// Public: List all posts
 app.get("/", (c) => {
   return c.json({ posts: getAllPosts() });
 });
 
-// Public: Get single post
 app.get("/:id", (c) => {
   const id = c.req.param("id");
   const post = getPostById(id);
@@ -28,7 +26,6 @@ app.get("/:id", (c) => {
   return c.json({ post });
 });
 
-// Protected: Create post
 app.post("/", authMiddleware, async (c) => {
   const body = await c.req.json<CreatePostInput>();
 
@@ -40,7 +37,6 @@ app.post("/", authMiddleware, async (c) => {
   return c.json({ post }, 201);
 });
 
-// Protected: Update post
 app.put("/:id", authMiddleware, async (c) => {
   const id = c.req.param("id");
   const body = await c.req.json<UpdatePostInput>();
@@ -54,7 +50,6 @@ app.put("/:id", authMiddleware, async (c) => {
   return c.json({ post });
 });
 
-// Protected: Delete post
 app.delete("/:id", authMiddleware, async (c) => {
   const id = c.req.param("id");
   const deleted = deletePost(id);

@@ -2,7 +2,6 @@ import type { Post, CreatePostInput, UpdatePostInput } from "../types";
 
 const posts: Map<string, Post> = new Map();
 
-// Seed with sample data
 const seedPosts: Post[] = [
   {
     id: "1",
