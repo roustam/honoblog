@@ -38,7 +38,7 @@ export const posts: Post[] = [
     ],
   },
   {
-    id: "1",
+    id: "4",
     title: "4444444444 post",
     heroImg:'img/someimg2',
     content: "This is another post",
@@ -62,6 +62,16 @@ export const posts: Post[] = [
   },
   {
     id: "6",
+    title: "Second post",
+    heroImg:'img/someimg2',
+    content: "This is another post",
+    createdAt: "2026-05-10",
+    modifiedAt: "2026-05-10",
+    published: true,
+    tags: [{ id: 3, tag: "bun", color: "yellow" }],
+  },
+    {
+    id: "7",
     title: "Second post",
     heroImg:'img/someimg2',
     content: "This is another post",

@@ -1,5 +1,6 @@
 import { Hono } from "hono";
-import {posts } from '../data/posts';
+import { posts } from '../data/posts';
+import { Paginate } from "../services/posts";
 const postsRoutes = new Hono();
 
 // postsRoutes.get("/", (c) => {
@@ -11,11 +12,12 @@ const postsRoutes = new Hono();
 
 postsRoutes.get('/', (c) => {
   const page = c.req.query("page")
-  const qty = c.req.query('qty')
-  if (!page && !qty) {
+  const pageSize = c.req.query('pageSize')
+  if (!page && !pageSize) {
     return c.text('Params missing', 404)
   } else {
-    return c.json({page, qty}, 200)
+    const paginatedPosts = Paginate(Number(page), Number(pageSize), posts)
+    return c.json({paginatedPosts}, 200)
   }
 })
 
