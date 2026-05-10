@@ -1,0 +1,73 @@
+import type { Post } from "../types/post";
+
+export const posts: Post[] = [
+  {
+    id: "1",
+    title: "My first post",
+    heroImg:'/img/someimg',
+    content: "This is the first post content",
+    createdAt: "2026-05-10",
+    modifiedAt: "2026-05-10",
+    published: true,
+    tags: [
+      { id: 1, tag: "typescript", color: "blue" },
+      { id: 2, tag: "hono", color: "green" },
+    ],
+  },
+  {
+    id: "2",
+    title: "Second post",
+    heroImg:'img/someimg2',
+    content: "This is another post",
+    createdAt: "2026-05-10",
+    modifiedAt: "2026-05-10",
+    published: true,
+    tags: [{ id: 3, tag: "bun", color: "yellow" }],
+  },
+    {
+    id: "3",
+    title: "33333333333d post",
+    heroImg:'/img/someimg',
+    content: "This is theaa asdfasd first asefas post content",
+    createdAt: "2026-05-10",
+    modifiedAt: "2026-05-10",
+    published: true,
+    tags: [
+      { id: 1, tag: "typescript", color: "blue" },
+      { id: 2, tag: "hono", color: "green" },
+    ],
+  },
+  {
+    id: "1",
+    title: "4444444444 post",
+    heroImg:'img/someimg2',
+    content: "This is another post",
+    createdAt: "2026-05-10",
+    modifiedAt: "2026-05-10",
+    published: true,
+    tags: [{ id: 3, tag: "bun", color: "yellow" }],
+  },
+    {
+    id: "5",
+    title: "My 5 post here",
+    heroImg:'/img/someimg',
+    content: "This is the first post content",
+    createdAt: "2026-05-10",
+    modifiedAt: "2026-05-10",
+    published: true,
+    tags: [
+      { id: 1, tag: "typescript", color: "blue" },
+      { id: 2, tag: "hono", color: "green" },
+    ],
+  },
+  {
+    id: "6",
+    title: "Second post",
+    heroImg:'img/someimg2',
+    content: "This is another post",
+    createdAt: "2026-05-10",
+    modifiedAt: "2026-05-10",
+    published: true,
+    tags: [{ id: 3, tag: "bun", color: "yellow" }],
+  },
+];

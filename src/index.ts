@@ -1,14 +1,10 @@
 import { Hono } from "hono";
+import homeRoutes from "./routes/home";
+import postsRoutes from "./routes/posts";
 
 const app = new Hono();
 
-const welcomeStrings = [
-  `Hello Hono from Bun ${process.versions.bun}!`,
-  "Test test"
-];
-
-app.get("/", (c) => {
-  return c.text(welcomeStrings.join("\n\n"));
-});
+app.route("/", homeRoutes);
+app.route("/posts/", postsRoutes);
 
 export default app;
