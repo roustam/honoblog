@@ -4,6 +4,7 @@ export const posts: Post[] = [
   {
     id: "1",
     title: "My first post",
+    slug: "my-first-post",
     heroImg:'/img/someimg',
     content: "This is the first post content",
     createdAt: "2026-05-10",
@@ -17,6 +18,7 @@ export const posts: Post[] = [
   {
     id: "2",
     title: "Second post",
+    slug: "second-post",
     heroImg:'img/someimg2',
     content: "This is another post",
     createdAt: "2026-05-10",
@@ -27,6 +29,7 @@ export const posts: Post[] = [
     {
     id: "3",
     title: "33333333333d post",
+    slug: "third-post",
     heroImg:'/img/someimg',
     content: "This is theaa asdfasd first asefas post content",
     createdAt: "2026-05-10",
@@ -40,6 +43,7 @@ export const posts: Post[] = [
   {
     id: "4",
     title: "4444444444 post",
+    slug: "fourth-post",
     heroImg:'img/someimg2',
     content: "This is another post",
     createdAt: "2026-05-10",
@@ -50,6 +54,7 @@ export const posts: Post[] = [
     {
     id: "5",
     title: "My 5 post here",
+    slug: "my-5-post-here",
     heroImg:'/img/someimg',
     content: "This is the first post content",
     createdAt: "2026-05-10",
@@ -63,6 +68,7 @@ export const posts: Post[] = [
   {
     id: "6",
     title: "Second post",
+    slug: "second-post-2",
     heroImg:'img/someimg2',
     content: "This is another post",
     createdAt: "2026-05-10",
@@ -73,6 +79,7 @@ export const posts: Post[] = [
     {
     id: "7",
     title: "Second post",
+    slug: "second-post-3",
     heroImg:'img/someimg2',
     content: "This is another post",
     createdAt: "2026-05-10",
