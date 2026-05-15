@@ -4,7 +4,7 @@ import homeRoutes from "./routes/home";
 import healthCheckRoute from "./routes/hcheck";
 import postsRoutes from "./routes/posts";
 
-export const config = { runtime: 'nodejs' }
+export const config = { runtime: 'edge' }
 
 const app = new Hono().basePath('/api');
 
