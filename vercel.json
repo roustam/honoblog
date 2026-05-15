@@ -1,6 +1,6 @@
 {
   "bunVersion": "1.x",
-  "buildCommand": "cd web && bun install && bun run build",
+  "buildCommand": "bun install && cd web && bun install && bun run build",
   "outputDirectory": "web/dist",
   "framework": null,
   "rewrites": [
