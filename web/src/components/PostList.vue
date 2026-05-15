@@ -46,7 +46,7 @@ onMounted(async () => {
 
     <ul v-else class="posts">
       <li v-for="post in posts" :key="post.id" class="post-item">
-        <a :href="`/posts/${post.slug}`" class="post-link">{{ post.title }}</a>
+        <a :href="`/api/posts/${post.slug}`" class="post-link">{{ post.title }}</a>
         <p class="post-content">{{ post.content }}</p>
         <p>posted: {{ post.createdAt }}</p>
       </li>
