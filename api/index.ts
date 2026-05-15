@@ -1,7 +1,10 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors"
+import homeRoutes from "./routes/home";
+import healthCheckRoute from "./routes/hcheck";
+import postsRoutes from "./routes/posts";
 
-export const config = { runtime: 'nodejs' }
+export const config = { runtime: 'edge' }
 
 const app = new Hono().basePath('/api');
 
@@ -18,6 +21,8 @@ app.use(
   }),
 );
 
-app.get('/hello', (c) => c.json({ message: 'Hello from Hono! iw orks' }))
+app.route("/", homeRoutes);
+app.route("/hcheck", healthCheckRoute);
+app.route("/posts/", postsRoutes);
 
 export default app;
