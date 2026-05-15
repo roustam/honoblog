@@ -1,3 +1,9 @@
 {
-    "bunVersion": "1.x"
+  "bunVersion": "1.x",
+  "buildCommand": "cd web && bun install && bun run build",
+  "outputDirectory": "web/dist",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index" },
+    { "source": "/(.*)",     "destination": "/index.html" }
+  ]
 }
